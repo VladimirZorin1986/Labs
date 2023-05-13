@@ -59,11 +59,87 @@ text-align: right;
   padding:10px;
 }
 
-.button input {
+.button_reg input {
   display:block;
-  width:200 px;
+  width:500 px;
   text_align: center;
   margin:10px 0;
   padding:10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button_art input {
+  display:block;
+  width:300 px;
+  text_align: center;
+  margin:10px 0;
+  padding:10px;
+}
+
+.registration {
+width: 960px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.username input {
+  display:block;
+  width:25%;
+  margin:10px 0;
+  padding:10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.email input {
+  display:block;
+  width:25%;
+  margin:10px 0;
+  padding:10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.password input {
+  display:block;
+  width:25%;
+  margin:10px 0;
+  padding:10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.registration h1 {
+text-align: center;
+}
+
+.errors {
+text-align: center;
+}
+
+.header h3 {
+text-align: right;
+}
+
+.header {
+width: 960px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5%;
+}
+
+.header a {
+color: #ffffff;
+}
+
+.button_log input {
+  display:block;
+  width:100px;
+  text_align: center;
+  margin:10px 0;
+  padding:10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 

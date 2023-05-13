@@ -8,6 +8,13 @@
 <body>
   <div class="header">
       <img src="{{ STATIC_URL }}/static/img/logo.png" width="100" height="100"/>
+      {% if request.user.is_authenticated %}
+      <h3><a href="/article/new">Создать статью</a></h3>
+      <h3><a href="/logout">Выход из аккаунта</a></h3>
+      {% else %}
+      <h3><a href="/login">Авторизация</a></h3>
+      <h3><a href="/register">Регистрация</a></h3>
+      {% endif %}
   </div>
   <div class="archive">
       {% for post in posts %}

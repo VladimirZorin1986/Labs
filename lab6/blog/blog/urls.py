@@ -24,4 +24,7 @@ urlpatterns = [
     path('', views.archive, name='archive'),
     re_path(r'^article/(?P<article_id>\d+)$', views.get_article, name='get_article'),
     path('article/new', views.create_post, name='create_post'),
+    path('register/', views.create_user, name='create_user'),
+    path('login/', views.login_user, name='login_user'),
+    path('logout/', views.logout_user, name='logout_user')
 ]
