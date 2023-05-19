@@ -5,6 +5,8 @@ body {
 }
 table {
     border-collapse: collapse;
+    width: 100%;
+    border: 2px solid;
 }
 p, h4 {
     font-size: 20px;
@@ -19,8 +21,9 @@ ul, ol {
 table tr td {
     padding: 5px;
 }
-table {
-	width: 100%;
+
+th, td {
+   border: 2px solid;
 }
 
 img {

@@ -1,4 +1,5 @@
 import statistics as stat
+from typing import Any
 
 groupmates = [
     {
@@ -47,14 +48,28 @@ def filter_by_mark(mark: int, students: list[dict]) -> list[dict]:
 
 def print_students(students):
     """Функция вывода на экран списка студентов"""
-    print('Имя'.ljust(15), 'Фамилия'.ljust(10), 'Экзамены'.ljust(30), 'Оценки'.ljust(20))
+    print('\nИмя'.ljust(15), 'Фамилия'.ljust(10), 'Экзамены'.ljust(30), 'Оценки'.ljust(20))
     for student in students:
         print(student["name"].ljust(15), student["surname"].ljust(10),
               str(student["exams"]).ljust(30), str(student["marks"]).ljust(20))
 
 
+def validate_mark(inp_mark: str) -> Any:
+    """Функция проверки корректности ввода оценки"""
+    stripped_mark = inp_mark.strip()
+    if stripped_mark.isdigit():
+        dig_mark = int(stripped_mark)
+        if 2 <= dig_mark <= 5:
+            return dig_mark
+        else:
+            raise ValueError('Значение средней оценки от 2 до 5.')
+    else:
+        raise TypeError('Оценка должна быть числом.')
+
+
 if __name__ == '__main__':
-    print_students(filter_by_mark(4, groupmates))
+    st_mark = validate_mark(input('Введите значение средней оценки: '))
+    print_students(filter_by_mark(st_mark, groupmates))
 
 
 
